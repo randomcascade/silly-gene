@@ -97,5 +97,5 @@ function display_mRNA() {
         }
         aminos += ", "
     }
-    aminoText.textContent = aminos;
+    aminoText.textContent = "Amino Acids: " + aminos;
 }
