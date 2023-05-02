@@ -78,10 +78,13 @@ const aminoText = document.querySelector('.aminoText');
 
 function display_mRNA() {
     let dna = document.getElementById("sequence").value.trim();
+    if(dna.length == 0) {
+        return;
+    }
     console.log(`Original string: ${dna}`);
     let mRNA = dna.replace(/[CAGT]/g, m => chars[m]);
     console.log(`mRNA result: ${mRNA}`);
-    RNA.textContent = mRNA;
+    RNA.textContent = "mRNA Sequence: " + mRNA;
     const codons = mRNA.match(/.{1,3}/g);
     console.log(`Codons: ${codons}`);
     let aminos = "";

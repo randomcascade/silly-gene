@@ -1,0 +1,8 @@
+input:invalid {
+    border: red solid 3px;
+  }
+p {
+    margin: 2em;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

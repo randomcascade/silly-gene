@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">  
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Silly Gene!</title> 
+        <title>Silly Gene!</title>
+        <link href="./styles/sillystyle.css" rel="stylesheet" type="text/css"> 
     </head>
     <body>
         <label for="sequence">
-            DNA Sequence
+            DNA Sequence:
             <input type="text" id="sequence" name="DNA Sequence" pattern="^[CAGT]+$" maxlength="30" required>
         </label>
         <button class="transcribe">Submit</button>  
         <p class="RNA">
-            Try entering a DNA sequence! Like TACACCTTGGCGACGACT for instance.
-            Only enter C, G, T, or A. No whitespaces please.</p>
+            Try entering a DNA sequence! Like TACACCTTGGCGACGACT for instance. <br>
+            <strong>Only enter C, G, T, or A. No whitespaces please.</strong>
+        </p>
         <p class="aminoText"></p>
     </body>
-    <script src="./silly-gene.js"></script>
+    <script type="text/javascript" src="silly-gene.js"></script>
 </html>
