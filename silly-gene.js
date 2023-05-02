@@ -87,15 +87,14 @@ function display_mRNA() {
     RNA.textContent = "mRNA Sequence: " + mRNA;
     const codons = mRNA.match(/.{1,3}/g);
     console.log(`Codons: ${codons}`);
-    let aminos = "";
+    let aminos = [];
     for(i of codons) {
         if(i.length == 3) {
-            aminos += codon2amino[i];
+            aminos.push(codon2amino[i]);
         } else {
-            aminos += "leftover bases: ";
-            aminos += i;
+            aminos.push("leftover bases: (" + i.split("").join(", ") + ")");
         }
-        aminos += ", "
     }
+    aminos = aminos.join(", ")
     aminoText.textContent = "Amino Acids: " + aminos;
 }
